@@ -2,11 +2,15 @@
 
 Source for my portfolio site: **https://maxsancheez.github.io**
 
-The page is generated from `projects.json` by `build.py` (Python standard library only).
+Everything is generated from `projects.json` (Python standard library only):
 
 ```bash
-python3 build.py
+python3 art.py     # draw tab banners and card images into images/
+python3 build.py   # write index.html
 ```
 
-- Add or edit a project in `projects.json`. Put its cover in `covers/<repo>.svg`; without one it gets a text tile.
+- Tabs: About, Experience, Research, Tools, Contact. Links like `/#research` open a tab directly.
+- Each card opens a detail panel. Experience cards open one once they have `detail` or `bullets`.
+- Add a project in `projects.json`; put its cover in `covers/<repo>.svg` (otherwise it gets a text tile).
+- Set `"photo"` in `projects.json` (e.g. `images/headshot.jpg`) to replace the MS monogram.
 - `qr.svg` / `qr.png` point to https://maxsancheez.github.io (for the CV).

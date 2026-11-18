@@ -1,38 +1,74 @@
 {
   "name": "Max Sanchez",
-  "tagline": "I take claims that spread online, check them against the research, and build small models in code to test them.",
+  "headline": "Research & analysis · business, behavioral economics and AI tools",
+  "pitch": "I take claims that spread online, check them against primary research, and build working models in Python to test them. Everything I make is public: write-ups, code, diagrams and sources.",
+  "photo": "",
   "links": [
-    {"label": "GitHub", "url": "https://github.com/maxsancheez"},
     {"label": "LinkedIn", "url": "https://www.linkedin.com/in/maxsanchezm"},
+    {"label": "GitHub", "url": "https://github.com/maxsancheez"},
     {"label": "Substack", "url": "https://substack.com/@maxsancheez"}
   ],
   "about": [
-    "Each project starts from something small, like a viral reel, an article or a passing idea. I trace the claims back to primary sources, write up what holds and what doesn't, and build a working model or tool to test the idea. Everything is public, with code, diagrams and sources."
+    "I'm drawn to questions where business, psychology and money meet. Why does a free offer attract the wrong customers? Does a viral investing thesis survive real data? Is a startup idea in India's cold chain actually a business?",
+    "My process is the same each time. I start from a small spark, like a reel, an article or an idea, then trace every claim back to papers, filings and datasets. I write up what holds and what doesn't, and build a model or tool that lets anyone test the idea themselves."
+  ],
+  "skills": [
+    {"name": "Research & fact-checking", "detail": "Primary sources, peer-reviewed papers, replication status"},
+    {"name": "Python modeling", "detail": "Funnel models, simulations, backtests"},
+    {"name": "Data analysis", "detail": "IMF, market and ETF data, statistics"},
+    {"name": "AI agents & automation", "detail": "Claude Code skills that research and publish end to end"},
+    {"name": "Writing", "detail": "Clear explainers for non-specialist readers"}
   ],
   "experience": [
-    {"org": "CAPA", "role": "Internship", "when": "2026 – present", "detail": ""},
-    {"org": "AIESEC", "role": "Teaching exchange", "when": "Summer 2026", "detail": ""}
+    {"id": "capa", "org": "CAPA", "role": "Internship", "when": "2026 – present", "image": "images/exp-capa.svg", "detail": [], "bullets": []},
+    {"id": "aiesec", "org": "AIESEC", "role": "Teaching exchange", "when": "Summer 2026", "image": "images/exp-aiesec.svg", "detail": [], "bullets": []}
   ],
   "sections": [
     {
-      "title": "Research case studies",
+      "tab": "research",
+      "title": "Research",
+      "intro": "Case studies that start from a popular claim and end with evidence and a working model.",
       "projects": [
-        {"repo": "free-massage-upsell-case-study", "title": "The free massage upsell", "summary": "Behavioral economics behind a viral sales tactic, with a funnel model showing who \"free\" attracts matters more than any in-session persuasion.", "tags": ["psychology", "pricing", "Python model"]},
-        {"repo": "hispanic-economy-planners-case-study", "title": "The world's #3 economy that speaks Spanish", "summary": "Fact-checking a viral claim against IMF data, plus a model of the bloc and financial-advisor coverage.", "tags": ["macroeconomics", "IMF data"]},
-        {"repo": "organic-hook-mining-case-study", "title": "Mining organic hooks for paid ads", "summary": "Does reusing viral TikTok hooks in ads work? Research on reach vs. persuasion, a hook-mining script and a winner's-curse simulation.", "tags": ["marketing", "simulation"]},
-        {"repo": "india-cold-chain-case-study", "title": "Farm-gate cold rooms in India", "summary": "India's cold-chain gap is the first mile. Unit economics of a pay-per-crate solar cold room.", "tags": ["agritech", "unit economics"]},
-        {"repo": "colombia-dynasty-wealth", "title": "Shirtsleeves to shirtsleeves", "summary": "Why the Vanderbilt fortune vanished, what the \"Rockefeller Waterfall\" is, and how it maps to Colombian law, with a 150-year simulation. EN/ES.", "tags": ["wealth", "law", "simulation"]},
-        {"repo": "china-equities-case-study", "title": "The \"buy Chinese stocks\" thesis", "summary": "Testing a viral investing thesis with real ETF data against the S&P 500.", "tags": ["finance", "data analysis"]},
-        {"repo": "pairs-trading", "title": "Pairs trading research", "summary": "Cointegration testing, spread z-scores and a backtest.", "tags": ["statistics", "finance"]}
+        {"repo": "free-massage-upsell-case-study", "title": "The free massage upsell", "summary": "Why who \"free\" attracts matters more than any sales script.", "tags": ["psychology", "pricing", "Python model"],
+         "detail": "A viral reel told massage therapists to give away free sessions and pause halfway to sell the rest. Every piece of the tactic has real psychology behind it: zero price, reciprocity, a relaxed client, a good experience cut off in the middle. The weak spot is who free pulls in. In the model, choosing who gets the free session matters more than anything said on the table.",
+         "built": ["Reviewed 15 sources, from the zero-price effect to Groupon retention data", "Built a 12-month funnel model comparing four pricing strategies", "Adapted it to a dog-daycare business as a second case"]},
+        {"repo": "hispanic-economy-planners-case-study", "title": "The world's #3 economy that speaks Spanish", "summary": "A viral economic claim, checked against IMF data.", "tags": ["macroeconomics", "IMF data"],
+         "detail": "A Spanish-language reel claimed Hispanic America, counted as one country, would be the world's third-largest economy, served by fewer than 1,000 Spanish-speaking financial planners. The #3 claim holds up, even without U.S. Latinos, barely. The planner count depends entirely on how you define a planner.",
+         "built": ["Rebuilt the ranking from IMF 2026 data", "Modeled the bloc with and without U.S. Latinos", "Compared definitions of financial planner and advisor"]},
+        {"repo": "organic-hook-mining-case-study", "title": "Mining organic hooks for paid ads", "summary": "Do viral TikTok openings make good ads?", "tags": ["marketing", "simulation"],
+         "detail": "A popular tip says to search TikTok for your customer's problem and reuse the most-viewed openings in ads. It's a solid way to generate ideas, but views aren't sales. In bait-heavy niches, the most-viewed hooks can convert worse than random ones, and many can't legally run as ads.",
+         "built": ["Reviewed research on reach vs. persuasion and native ads", "Wrote a hook-mining script that ranks by views relative to followers", "Simulated the winner's curse in picking ads by views"]},
+        {"repo": "india-cold-chain-case-study", "title": "Farm-gate cold rooms in India", "summary": "Unit economics of a pay-per-crate solar cold room.", "tags": ["agritech", "unit economics"],
+         "detail": "India doesn't lack cold storage. It lacks the first mile: pre-cooling, packing and refrigerated trucks between farm and store. A shared solar cold room helps, but on storage fees alone it barely pays back. The opportunity is running it as the entry point to a chain.",
+         "built": ["Pinned the cold-chain gap on the first mile, not storage", "Built a payback model for a pay-per-crate cold room", "Laid out the business model around it"]},
+        {"repo": "colombia-dynasty-wealth", "title": "Shirtsleeves to shirtsleeves", "summary": "How family fortunes vanish, and how to plan under Colombian law.", "tags": ["wealth", "law", "simulation"],
+         "detail": "Why the Vanderbilt fortune vanished, what the \"Rockefeller Waterfall\" structure really is, and how it could be adapted under Colombian law. Written in English and Spanish. Educational research, not financial or legal advice.",
+         "built": ["Compared the Vanderbilt and Rockefeller histories", "Mapped the structure onto Colombian legal tools", "Built a 150-year wealth simulation in Python"]},
+        {"repo": "china-equities-case-study", "title": "The \"buy Chinese stocks\" thesis", "summary": "A viral investing thesis, tested with real ETF data.", "tags": ["finance", "data analysis"],
+         "detail": "Tests a viral \"buy Chinese stocks now\" thesis by comparing China ETFs (MCHI, FXI, KWEB, ASHR) with the S&P 500, and explains how Latin American investors could access them. Educational research, not investment advice.",
+         "built": ["Pulled and compared ETF performance data", "Weighed the thesis against the numbers", "Compared access routes for LatAm investors"]},
+        {"repo": "pairs-trading", "title": "Pairs trading research", "summary": "Cointegration testing and a backtest.", "tags": ["statistics", "finance"],
+         "detail": "A statistical pairs-trading analysis: testing whether two assets move together over the long run, tracking how far their spread drifts, and backtesting a strategy that trades on it. Research, not financial advice.",
+         "built": ["Ran cointegration tests on candidate pairs", "Computed spread z-scores", "Backtested the strategy"]}
       ]
     },
     {
-      "title": "Tools I built",
+      "tab": "tools",
+      "title": "Tools",
+      "intro": "Software I built to make research and writing faster, all open source.",
       "projects": [
-        {"repo": "reel-to-repo", "title": "Reel → Repo", "summary": "A Claude Code skill that turns a reel link into a researched, fact-checked case study with code and diagrams, published as a GitHub repo.", "tags": ["AI agents", "automation"]},
-        {"repo": "aeo-copywriting-skill", "title": "AEO copywriting skill", "summary": "Fact-checks a popular answer-engine-optimization course and turns it into a Claude skill plus a copy linter.", "tags": ["AI search", "Python"]},
-        {"repo": "humanizer-skill", "title": "Humanizer", "summary": "A Claude skill and detector that strip AI-writing tells from text, with a look at why models overuse words like \"delve\".", "tags": ["NLP", "writing"]},
-        {"repo": "claude-video-editing-skill", "title": "Video editing skill", "summary": "Cuts dead air, captions in safe zones and mixes music, by driving ffmpeg and Whisper.", "tags": ["ffmpeg", "Whisper"]}
+        {"repo": "reel-to-repo", "title": "Reel → Repo", "summary": "An AI agent that turns a link into a published case study.", "tags": ["AI agents", "automation"],
+         "detail": "Paste a reel link, article or one-line idea and type /research. A Claude Code skill watches the reel, fact-checks it, researches it, writes and runs code, draws diagrams and a cover, then publishes the result as its own GitHub repo. Most projects on this site started this way. No API keys, $0 per run.",
+         "built": ["Designed the end-to-end research workflow", "Wrote checks for sources, links, voice and diagrams", "Automated publishing to GitHub"]},
+        {"repo": "aeo-copywriting-skill", "title": "AEO copywriting skill", "summary": "Write web pages that AI answer engines quote.", "tags": ["AI search", "Python"],
+         "detail": "Fact-checks Ahrefs' popular answer engine optimization course against the studies behind it. Most stats hold up, but they're correlations and a few apply only to Google. The writing advice was the most useful part, so I turned it into a Claude skill plus a linter that scores copy section by section.",
+         "built": ["Traced 10+ statistics to their original studies", "Wrote a Claude skill for AEO copy", "Built a Python linter for answer-first, citable writing"]},
+        {"repo": "humanizer-skill", "title": "Humanizer", "summary": "Strip AI-writing tells from a draft.", "tags": ["NLP", "writing"],
+         "detail": "A Claude skill that edits AI-drafted text in three passes: find the tells, rewrite without them, report what changed. Research shows words like \"delve\" spiked after ChatGPT launched, but no list of tells can prove a text is AI. The goal is writing that reads well.",
+         "built": ["Reviewed research on AI word frequency", "Wrote a three-pass editing skill", "Built a detector for the same tells"]},
+        {"repo": "claude-video-editing-skill", "title": "Video editing skill", "summary": "Turn a raw talking-head video into a captioned short.", "tags": ["ffmpeg", "Whisper"],
+         "detail": "A viral reel claimed a downloadable Claude skill edits your videos. It can, but only by driving ffmpeg and Whisper, since Claude can't watch video. I built a working version that cuts dead air, captions in short chunks inside safe zones, and mixes in music.",
+         "built": ["Built silence detection and cutting with ffmpeg", "Added Whisper transcription and timed captions", "Placed captions outside the platform button zones"]}
       ]
     }
   ]
