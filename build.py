@@ -132,7 +132,10 @@ dialog img,dialog .tile{display:block;width:100%;aspect-ratio:2/1;object-fit:cov
 .mail{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:22px 24px;border:2px solid var(--accent);border-radius:16px;background:var(--surface);margin-bottom:16px}
 .mail .addr{font:800 clamp(1.15rem,3.2vw,1.6rem)/1.2 var(--display);user-select:all;word-break:break-all;margin-right:auto}
 .copied{font-size:.88rem;color:var(--accent-ink);font-weight:600}
-.others{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.others{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.thumb img,.dart img{display:block;width:100%;height:100%;object-fit:cover}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:18px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block}
 .others a{display:block;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--surface);text-decoration:none}
 .others a:hover{border-color:var(--accent)}
 .others strong{display:block}
@@ -195,6 +198,13 @@ def art(path):
     return open(os.path.join(HERE, path), encoding="utf-8").read()
 
 
+def picture(path, alt=""):
+    """Drawn SVGs are inlined so they follow the theme; photos load as <img>."""
+    if path.endswith(".svg"):
+        return art(path)
+    return f'<img src="{e(path)}" alt="{e(alt)}" loading="lazy">'
+
+
 def top_image(p):
     if p.get("repo") and os.path.exists(os.path.join(HERE, "covers", p["repo"] + ".svg")):
         return f'<img src="covers/{e(p["repo"])}.svg" alt="">'
@@ -229,7 +239,7 @@ def project(p):
 
 def experience_row(x):
     did = "d-exp-" + x["id"]
-    thumb = art(x["image"])
+    thumb = picture(x["image"])
     when = f'<span class="when">{e(x["when"])}</span>' if x.get("when") else ""
     row = (f'<button class="row" type="button" data-open="{did}" aria-haspopup="dialog">'
            f'<span class="thumb">{thumb}</span><span><span class="ttl">{e(x["org"])}</span>'
@@ -240,7 +250,9 @@ def experience_row(x):
     dialog = (f'<dialog id="{did}" aria-labelledby="{did}-t"><button class="dclose" type="button" aria-label="Close">×</button>'
               f'<div class="dart">{thumb}</div><div class="dbody"><h3 id="{did}-t">{e(x["org"])}</h3>'
               f'<strong>{e(x["role"])}</strong>' + (f' · <span class="when">{e(x["when"])}</span>' if x.get("when") else "")
-              + paras + (f"<ul>{bl}</ul>" if bl else "") + "</div></dialog>")
+              + paras + (f"<ul>{bl}</ul>" if bl else "")
+              + ('<div class="gallery">' + "".join(picture(g, x["org"]) for g in x.get("gallery", [])) + "</div>"
+                 if x.get("gallery") else "") + "</div></dialog>")
     return row, dialog
 
 

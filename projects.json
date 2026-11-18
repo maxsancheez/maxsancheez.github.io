@@ -7,10 +7,6 @@
     {
       "label": "LinkedIn",
       "url": "https://www.linkedin.com/in/maxsanchezm"
-    },
-    {
-      "label": "Substack",
-      "url": "https://substack.com/@maxsancheez"
     }
   ],
   "about": [
@@ -47,7 +43,8 @@
       "detail": [
         "Internship at AHK Panama, the German-Panamanian Chamber of Commerce."
       ],
-      "bullets": []
+      "bullets": [],
+      "gallery": []
     },
     {
       "id": "aiesec",
@@ -59,7 +56,8 @@
       "detail": [
         "Through AIESEC, I taught VR and AI game design with Unity to international students at H-Farm International School in Italy."
       ],
-      "bullets": []
+      "bullets": [],
+      "gallery": []
     },
     {
       "id": "tapreview",
@@ -73,7 +71,8 @@
       ],
       "bullets": [
         "Built my own outreach CRM in Python and SQLite to run daily prospecting"
-      ]
+      ],
+      "gallery": []
     },
     {
       "id": "nutripeludos",
@@ -85,7 +84,8 @@
       "detail": [
         "I ran NutriPeludos, a dog nutrition business, and grew it to more than 20 recurring clients."
       ],
-      "bullets": []
+      "bullets": [],
+      "gallery": []
     },
     {
       "id": "danone",
@@ -97,7 +97,8 @@
       "detail": [
         "A consulting project for Danone, done through Tecnológico de Monterrey."
       ],
-      "bullets": []
+      "bullets": [],
+      "gallery": []
     }
   ],
   "sections": [
@@ -234,8 +235,7 @@
             "Designed the end-to-end research workflow",
             "Wrote checks for sources, links, voice and diagrams",
             "Automated publishing to GitHub"
-          ],
-          "featured": true
+          ]
         },
         {
           "repo": "",
@@ -266,7 +266,8 @@
             "Traced 10+ statistics to their original studies",
             "Wrote a Claude skill for AEO copy",
             "Built a Python linter for answer-first, citable writing"
-          ]
+          ],
+          "featured": true
         },
         {
           "repo": "humanizer-skill",
