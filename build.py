@@ -130,6 +130,7 @@ dialog img,dialog .tile{display:block;width:100%;aspect-ratio:2/1;object-fit:cov
 
 /* contact */
 .mail{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:22px 24px;border:2px solid var(--accent);border-radius:16px;background:var(--surface);margin-bottom:16px}
+.mlabel{display:block;font:600 .72rem/1.4 var(--body);text-transform:uppercase;letter-spacing:.09em;color:var(--muted);user-select:none}
 .mail .addr{font:800 clamp(1.15rem,3.2vw,1.6rem)/1.2 var(--display);user-select:all;word-break:break-all;margin-right:auto}
 .copied{font-size:.88rem;color:var(--accent-ink);font-weight:600}
 .others{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
@@ -303,16 +304,17 @@ def main():
         body += f'<div class="grid" style="--cols:{cols_for(len(cards))}">{"".join(cards)}</div>'
         panels.append((s["tab"], s["title"], panel(s["tab"], s["title"], body, s.get("intro", ""))))
 
-    user, domain = d["email"].split("@")
-    shown = f"{e(user)}&#64;{e(domain)}"
-    contact = (f'<div class="mail"><span class="addr">{shown}</span>'
-               f'<a class="btn primary" href="mailto:{e(user)}&#64;{e(domain)}">Email me</a>'
-               f'<button class="btn" type="button" data-copy="{e(d["email"])}" data-note="copy-note">Copy address</button>'
-               f'<span class="copied" id="copy-note" aria-live="polite"></span></div>'
-               '<div class="others">' + "".join(
+    mails = ""
+    for i, m in enumerate(d["emails"]):
+        user, domain = m["address"].split("@")
+        mails += (f'<div class="mail"><span class="addr"><span class="mlabel">{e(m["label"])}</span>{e(user)}&#64;{e(domain)}</span>'
+                  f'<a class="btn primary" href="mailto:{e(user)}&#64;{e(domain)}">Email me</a>'
+                  f'<button class="btn" type="button" data-copy="{e(m["address"])}" data-note="copy-note-{i}">Copy address</button>'
+                  f'<span class="copied" id="copy-note-{i}" aria-live="polite"></span></div>')
+    contact = (mails + '<div class="others">' + "".join(
                    f'<a href="{e(l["url"])}"><strong>{e(l["label"])}</strong><span>{e(l["url"].split("://")[1])}</span></a>'
                    for l in d["links"]) + "</div>")
-    panels.append(("contact", "Contact", panel("contact", "Get in touch", contact, "Email is the best way to reach me. I read every message.")))
+    panels.append(("contact", "Contact", panel("contact", "Get in touch", contact, "Email is the best way to reach me. Either address works.")))
 
     tabs = "".join(f'<button role="tab" id="t-{t}" data-tab="{t}" aria-controls="p-{t}" aria-selected="false">{e(l)}</button>'
                    for t, l, _ in panels)
