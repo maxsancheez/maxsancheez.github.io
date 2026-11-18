@@ -1,0 +1,39 @@
+{
+  "name": "Max Sanchez",
+  "tagline": "I take claims that spread online, check them against the research, and build small models in code to test them.",
+  "links": [
+    {"label": "GitHub", "url": "https://github.com/maxsancheez"},
+    {"label": "LinkedIn", "url": "https://www.linkedin.com/in/maxsanchezm"},
+    {"label": "Substack", "url": "https://substack.com/@maxsancheez"}
+  ],
+  "about": [
+    "Each project starts from something small, like a viral reel, an article or a passing idea. I trace the claims back to primary sources, write up what holds and what doesn't, and build a working model or tool to test the idea. Everything is public, with code, diagrams and sources."
+  ],
+  "experience": [
+    {"org": "CAPA", "role": "Internship", "when": "2026 – present", "detail": ""},
+    {"org": "AIESEC", "role": "Teaching exchange", "when": "Summer 2026", "detail": ""}
+  ],
+  "sections": [
+    {
+      "title": "Research case studies",
+      "projects": [
+        {"repo": "free-massage-upsell-case-study", "title": "The free massage upsell", "summary": "Behavioral economics behind a viral sales tactic, with a funnel model showing who \"free\" attracts matters more than any in-session persuasion.", "tags": ["psychology", "pricing", "Python model"]},
+        {"repo": "hispanic-economy-planners-case-study", "title": "The world's #3 economy that speaks Spanish", "summary": "Fact-checking a viral claim against IMF data, plus a model of the bloc and financial-advisor coverage.", "tags": ["macroeconomics", "IMF data"]},
+        {"repo": "organic-hook-mining-case-study", "title": "Mining organic hooks for paid ads", "summary": "Does reusing viral TikTok hooks in ads work? Research on reach vs. persuasion, a hook-mining script and a winner's-curse simulation.", "tags": ["marketing", "simulation"]},
+        {"repo": "india-cold-chain-case-study", "title": "Farm-gate cold rooms in India", "summary": "India's cold-chain gap is the first mile. Unit economics of a pay-per-crate solar cold room.", "tags": ["agritech", "unit economics"]},
+        {"repo": "colombia-dynasty-wealth", "title": "Shirtsleeves to shirtsleeves", "summary": "Why the Vanderbilt fortune vanished, what the \"Rockefeller Waterfall\" is, and how it maps to Colombian law, with a 150-year simulation. EN/ES.", "tags": ["wealth", "law", "simulation"]},
+        {"repo": "china-equities-case-study", "title": "The \"buy Chinese stocks\" thesis", "summary": "Testing a viral investing thesis with real ETF data against the S&P 500.", "tags": ["finance", "data analysis"]},
+        {"repo": "pairs-trading", "title": "Pairs trading research", "summary": "Cointegration testing, spread z-scores and a backtest.", "tags": ["statistics", "finance"]}
+      ]
+    },
+    {
+      "title": "Tools I built",
+      "projects": [
+        {"repo": "reel-to-repo", "title": "Reel → Repo", "summary": "A Claude Code skill that turns a reel link into a researched, fact-checked case study with code and diagrams, published as a GitHub repo.", "tags": ["AI agents", "automation"]},
+        {"repo": "aeo-copywriting-skill", "title": "AEO copywriting skill", "summary": "Fact-checks a popular answer-engine-optimization course and turns it into a Claude skill plus a copy linter.", "tags": ["AI search", "Python"]},
+        {"repo": "humanizer-skill", "title": "Humanizer", "summary": "A Claude skill and detector that strip AI-writing tells from text, with a look at why models overuse words like \"delve\".", "tags": ["NLP", "writing"]},
+        {"repo": "claude-video-editing-skill", "title": "Video editing skill", "summary": "Cuts dead air, captions in safe zones and mixes music, by driving ffmpeg and Whisper.", "tags": ["ffmpeg", "Whisper"]}
+      ]
+    }
+  ]
+}

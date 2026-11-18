@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <rect width="1280" height="640" fill="#141414"/>
+  <!-- ranking bars: US, China, the bloc (accent), Germany, Japan -->
+  <g font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="22" fill="#9a9a9a">
+    <text x="820" y="168">1  United States</text>
+    <rect x="820" y="178" width="380" height="10" rx="5" fill="#555"/>
+    <text x="820" y="238">2  China</text>
+    <rect x="820" y="248" width="250" height="10" rx="5" fill="#555"/>
+    <text x="820" y="308" fill="#5fd3b0" font-weight="700">3  Hispanic bloc</text>
+    <rect x="820" y="318" width="116" height="10" rx="5" fill="#5fd3b0"/>
+    <text x="820" y="378">4  Germany</text>
+    <rect x="820" y="388" width="66" height="10" rx="5" fill="#555"/>
+    <text x="820" y="448">5  Japan</text>
+    <rect x="820" y="458" width="52" height="10" rx="5" fill="#555"/>
+  </g>
+  <g font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif">
+    <text x="80" y="150" font-size="24" fill="#5fd3b0" font-weight="600" letter-spacing="3">CASE STUDY · FACT CHECK</text>
+    <text x="80" y="240" font-size="66" font-weight="800" fill="#f5f5f5">The #3 economy</text>
+    <text x="80" y="315" font-size="66" font-weight="800" fill="#f5f5f5">speaks Spanish?</text>
+    <text x="80" y="400" font-size="28" fill="#c8c8c8">IMF 2026 says yes, barely. The</text>
+    <text x="80" y="440" font-size="28" fill="#c8c8c8">planner shortage depends on who counts.</text>
+    <text x="80" y="560" font-size="22" fill="#777">$5.52T LatAm  ·  $9.52T with U.S. Latinos  ·  Germany $5.47T</text>
+  </g>
+</svg>
