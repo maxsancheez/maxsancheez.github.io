@@ -10,7 +10,7 @@
     }
   ],
   "about": [
-    "I'm from Cali, Colombia, and I've lived and worked in Mexico, Panama and Italy. I'm an economics major with a psychology minor at Florida State University. I'm finishing my first two years at FSU's Panama campus and move to Tallahassee in Fall 2027, with graduation projected for May 2029.",
+    "I'm from Cali, Colombia, and I've lived and worked in Mexico, Panama and Italy. I'm an economics major with a psychology minor at Florida State University, in its 2+2 international scholarship program. I'm finishing my first two years at FSU's Panama campus, where I'm on the Business Club board, and move to Tallahassee in Fall 2027, with graduation projected for May 2029. Before FSU, I spent a semester studying business management and finance at Tecnológico de Monterrey in Mexico.",
     "My research usually starts from a claim that's spreading online. I trace it back to the papers and data, write up what holds and what doesn't, and build a small model so anyone can test the idea.",
     "Outside of work I'm happiest traveling, getting to know new cultures, playing sports and being outdoors."
   ],
@@ -18,6 +18,14 @@
     {
       "name": "Data and code",
       "detail": "Python, SQLite, Streamlit, advanced Excel, statistics"
+    },
+    {
+      "name": "AI and tools",
+      "detail": "Claude and Claude Code, Canva AI, Unity 3D, SAP (exposure)"
+    },
+    {
+      "name": "Business",
+      "detail": "Market research, stakeholder interviews, cost-benefit analysis, B2B event coordination, digital marketing"
     },
     {
       "name": "Research",
@@ -29,34 +37,48 @@
     },
     {
       "name": "Languages",
-      "detail": "Spanish (native), English (fluent), Mandarin (learning)"
+      "detail": "Spanish (native), English (fluent, C1+), Mandarin (learning)"
+    },
+    {
+      "name": "Certifications",
+      "detail": "Machine Learning Application (Coursera)"
     }
   ],
   "experience": [
     {
       "id": "ahk",
-      "org": "AHK Panama",
+      "org": "AHK Panama (CAPA)",
       "role": "Intern",
-      "when": "Current",
+      "when": "Oct 2026 – Present",
       "image": "images/exp-ahk.svg",
-      "summary": "German-Panamanian Chamber of Commerce.",
+      "summary": "German-Panamanian Chamber of Commerce and Industry: trade missions, market-entry research and client work.",
       "detail": [
-        "Internship at AHK Panama, the German-Panamanian Chamber of Commerce."
+        "I intern at the German-Panamanian Chamber of Commerce and Industry (CAPA) in Panama City, which helps German companies do business in Panama and Central America."
       ],
-      "bullets": [],
+      "bullets": [
+        "Coordinated on site the Railway Technology & Infrastructure Symposium, a Germany–Panama–Costa Rica trade mission with five German rail firms including Knorr-Bremse and Vossloh",
+        "Organized 1:1 B2B meetings between the German delegation and Panamanian companies, phone-screening registrants for sector fit and running the schedule in a custom Excel tool",
+        "Research Panama's import and sanitary registration requirements (APA, MINSA) for a German publisher planning market entry",
+        "Led the initial client consultation for a German manufacturer under CAPA's Pre-Market Check Panama service",
+        "Produce the chamber's newsletter (Spanish and German editions) and its LinkedIn content"
+      ],
       "gallery": []
     },
     {
       "id": "aiesec",
       "org": "AIESEC · H-Farm International School",
-      "role": "Teacher, VR and AI game design",
-      "when": "Summer 2026",
+      "role": "Digital Educator, AIESEC Global Volunteer",
+      "when": "Jun – Jul 2026",
       "image": "images/exp-aiesec.svg",
-      "summary": "Taught VR and AI game design in Unity to international students in Italy.",
+      "summary": "Designed and taught a VR and AI curriculum for students ages 11–14 in Treviso, Italy.",
       "detail": [
-        "Through AIESEC, I taught VR and AI game design with Unity to international students at H-Farm International School in Italy."
+        "Through AIESEC, I designed and taught a VR and AI curriculum at H-Farm International School in Treviso, Italy, for international students ages 11–14."
       ],
-      "bullets": [],
+      "bullets": [
+        "Covered 3D game design in Unity and applied AI (image generation, graphic design)",
+        "Selected for AIESEC's competitive Scale Up! program (UN SDG 17), one of a small cohort placed abroad to lead technical programming for a partner school",
+        "Coordinated curriculum delivery with program staff in a multinational team"
+      ],
       "gallery": []
     },
     {
@@ -75,29 +97,52 @@
       "gallery": []
     },
     {
-      "id": "nutripeludos",
-      "org": "NutriPeludos",
-      "role": "Ran the business",
-      "when": "",
-      "image": "images/exp-nutripeludos.svg",
-      "summary": "Dog nutrition business with 20+ recurring clients.",
+      "id": "danone",
+      "org": "Danone · Tecnológico de Monterrey",
+      "role": "Strategic Business Consultant",
+      "when": "Aug – Dec 2025",
+      "image": "images/exp-danone.svg",
+      "summary": "Designed the \"Danone Box\" subscription model to tackle Danone's digital distribution challenges.",
       "detail": [
-        "I ran NutriPeludos, a dog nutrition business, and grew it to more than 20 recurring clients."
+        "A consulting project for Danone during my semester at Tecnológico de Monterrey in Mexico, working in a cross-functional student team."
       ],
-      "bullets": [],
+      "bullets": [
+        "Ran a needs assessment and operational gap analysis of Danone's digital distribution challenges",
+        "Designed the \"Danone Box\" subscription model, a scalable recurring-revenue concept built from stakeholder interviews, cost-benefit analysis and supply chain mapping",
+        "Presented recommendations and an implementation roadmap to corporate leadership, backed by market data and competitor benchmarking"
+      ],
       "gallery": []
     },
     {
-      "id": "danone",
-      "org": "Danone · Tecnológico de Monterrey",
-      "role": "Consulting project",
-      "when": "",
-      "image": "images/exp-danone.svg",
-      "summary": "Consulting project for Danone through Tec de Monterrey.",
+      "id": "nutripeludos",
+      "org": "NutriPeludos",
+      "role": "Founder",
+      "when": "Aug 2024 – Jun 2025",
+      "image": "images/exp-nutripeludos.svg",
+      "summary": "Dog nutrition startup grown from zero to $1,000+ in revenue and 20+ recurring clients.",
       "detail": [
-        "A consulting project for Danone, done through Tecnológico de Monterrey."
+        "I founded NutriPeludos, a dog nutrition social enterprise, and grew it from zero to more than $1,000 in revenue and 20+ recurring clients."
       ],
-      "bullets": [],
+      "bullets": [
+        "Managed supply chain, client acquisition and branding",
+        "Ran the social media marketing strategy",
+        "Did ongoing competitor research to refine product-market fit and find partnership opportunities"
+      ],
+      "gallery": []
+    },
+    {
+      "id": "dakora",
+      "org": "Dakora S.A.S",
+      "role": "Industrial Optimization Intern",
+      "when": "Feb 2024",
+      "image": "images/exp-dakora.svg",
+      "summary": "Rotated across sales, operations and technical support in Colombia.",
+      "detail": [
+        "An internship at Dakora S.A.S in Colombia, rotating across sales, operations and technical support."
+      ],
+      "bullets": [
+        "Mapped administrative workflows hands-on in SAP"
+      ],
       "gallery": []
     }
   ],

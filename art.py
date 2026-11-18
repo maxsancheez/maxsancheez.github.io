@@ -145,17 +145,32 @@ def thumb(kind):
         for i, bh in enumerate([50, 90, 70, 130]):
             b += f'<rect x="{135+i*60}" y="{260-bh}" width="38" height="{bh}" rx="4" fill="{A if i == 3 else INK}"/>'
         b += f'<path d="M135 150 L195 120 L255 135 L330 90" fill="none" stroke="{A}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>'
+    elif kind == "dakora":
+        # a gear beside a three-step workflow
+        cx, cy = 150, 180
+        for k in range(8):
+            ang = k * math.pi / 4
+            x, y = cx + 72 * math.cos(ang), cy + 72 * math.sin(ang)
+            b += f'<rect x="{x-14:.1f}" y="{y-14:.1f}" width="28" height="28" rx="4" fill="{INK}" transform="rotate({k*45} {x:.1f} {y:.1f})"/>'
+        b += f'<circle cx="{cx}" cy="{cy}" r="66" fill="{INK}"/>'
+        b += f'<circle cx="{cx}" cy="{cy}" r="26" fill="{BG}"/>'
+        for i, y in enumerate((90, 165, 240)):
+            b += f'<rect x="270" y="{y}" width="120" height="44" rx="10" fill="{A if i == 2 else SOFT}"/>'
+        for y in (134, 209):
+            b += f'<path d="M330 {y+4} v22" stroke="{INK}" stroke-width="6" stroke-linecap="round"/>'
     return svg(w, h, b)
 
 
 def main():
     os.makedirs(OUT, exist_ok=True)
+    # only clear drawn SVGs; photos (headshot, galleries) live in images/ too
     for old in os.listdir(OUT):
-        os.remove(os.path.join(OUT, old))
+        if old.endswith(".svg"):
+            os.remove(os.path.join(OUT, old))
     for name, fn in {"about": about, "experience": experience, "research": research,
                      "tools": tools, "contact": contact}.items():
         open(os.path.join(OUT, f"tab-{name}.svg"), "w").write(fn())
-    for k in ("tapreview", "nutripeludos", "aiesec", "ahk", "danone"):
+    for k in ("tapreview", "nutripeludos", "aiesec", "ahk", "danone", "dakora"):
         open(os.path.join(OUT, f"exp-{k}.svg"), "w").write(thumb(k))
     print("wrote", len(os.listdir(OUT)), "images")
 
