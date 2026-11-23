@@ -9,6 +9,7 @@ card's detail panel. Links like /#research open that tab directly. Without
 JavaScript every section shows, one after another. Mark one project per
 section with "featured": true to show it as the wide card at the top.
 """
+import hashlib
 import html
 import json
 import os
@@ -311,9 +312,20 @@ def main():
                   f'<a class="btn primary" href="mailto:{e(user)}&#64;{e(domain)}">Email me</a>'
                   f'<button class="btn" type="button" data-copy="{e(m["address"])}" data-note="copy-note-{i}">Copy address</button>'
                   f'<span class="copied" id="copy-note-{i}" aria-live="polite"></span></div>')
+    # Resume PDFs keep fixed file names (replace the file, never rename it); the ?v= hash
+    # changes with the file's contents so browsers don't serve an old copy.
+    here = os.path.dirname(os.path.abspath(__file__))
+    resumes = []
+    for r in d.get("resumes", []):
+        with open(os.path.join(here, r["file"]), "rb") as f:
+            v = hashlib.sha1(f.read()).hexdigest()[:8]
+        resumes.append({**r, "href": f'{r["file"]}?v={v}'})
     contact = (mails + '<div class="others">' + "".join(
                    f'<a href="{e(l["url"])}"><strong>{e(l["label"])}</strong><span>{e(l["url"].split("://")[1])}</span></a>'
-                   for l in d["links"]) + "</div>")
+                   for l in d["links"]) + "".join(
+                   f'<a href="{e(r["href"])}"><strong>{e(r["label"])}</strong><span>{e(r["note"])}</span></a>'
+                   for r in resumes) + "</div>")
+    resume_btn = f'<a class="btn" href="{e(resumes[0]["href"])}">Resume</a>' if resumes else ""
     panels.append(("contact", "Contact", panel("contact", "Get in touch", contact, "Email is the best way to reach me. Either address works.")))
 
     tabs = "".join(f'<button role="tab" id="t-{t}" data-tab="{t}" aria-controls="p-{t}" aria-selected="false">{e(l)}</button>'
@@ -349,7 +361,7 @@ def main():
 <p class="headline">{e(d["headline"])}</p>
 <p class="pitch">{e(d["pitch"])}</p>
 <p class="open">{e(d["open_to"])}</p>
-<div class="cta"><a class="btn primary" href="#research" data-goto="research">See my work</a><a class="btn" href="#contact" data-goto="contact">Contact me</a><a class="btn" href="{e(d["links"][0]["url"])}">LinkedIn</a></div>
+<div class="cta"><a class="btn primary" href="#research" data-goto="research">See my work</a><a class="btn" href="#contact" data-goto="contact">Contact me</a><a class="btn" href="{e(d["links"][0]["url"])}">LinkedIn</a>{resume_btn}</div>
 </div>
 </header>
 {facts}

@@ -9,6 +9,18 @@
       "url": "https://www.linkedin.com/in/maxsanchezm"
     }
   ],
+  "resumes": [
+    {
+      "label": "Resume (English)",
+      "note": "PDF",
+      "file": "cv/Maximiliano-Sanchez-CV-EN.pdf"
+    },
+    {
+      "label": "CV (Español)",
+      "note": "PDF",
+      "file": "cv/Maximiliano-Sanchez-CV-ES.pdf"
+    }
+  ],
   "about": [
     "I'm from Cali, Colombia, and I've lived and worked in Mexico, Panama and Italy. I'm an economics major with a psychology minor at Florida State University, in its 2+2 international scholarship program. I'm finishing my first two years at FSU's Panama campus, where I'm on the Business Club board, and move to Tallahassee in Fall 2027, with graduation projected for May 2029. Before FSU, I spent a semester studying business management and finance at Tecnológico de Monterrey in Mexico.",
     "My research usually starts from a claim that's spreading online. I trace it back to the papers and data, write up what holds and what doesn't, and build a small model so anyone can test the idea.",
