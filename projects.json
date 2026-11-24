@@ -97,13 +97,14 @@
       "id": "tapreview",
       "org": "TapReview",
       "role": "Founder",
-      "when": "",
+      "when": "Fall 2026 – Present",
       "image": "images/exp-tapreview.svg",
       "summary": "NFC review cards that help local businesses collect reviews.",
       "detail": [
         "I founded TapReview, which makes NFC review cards for local businesses: a customer taps the card with their phone and lands on the review page."
       ],
       "bullets": [
+        "About $1,500 in profit so far, run alongside classes",
         "Built my own outreach CRM in Python and SQLite to run daily prospecting"
       ],
       "gallery": []
@@ -260,16 +261,16 @@
         {
           "repo": "pairs-trading",
           "title": "Pairs trading research",
-          "summary": "Cointegration testing and a backtest.",
+          "summary": "Which popular stock pairs actually move together?",
           "tags": [
             "statistics",
             "finance"
           ],
-          "detail": "A statistical pairs-trading analysis: testing whether two assets move together over the long run, tracking how far their spread drifts, and backtesting a strategy that trades on it. Research, not financial advice.",
+          "detail": "A statistical pairs-trading analysis: testing whether two stocks move together over the long run and how fast the gap between them closes. The textbook Coca-Cola/Pepsi pair turns out not to be cointegrated. A backtest is the next step. Research, not financial advice.",
           "built": [
-            "Ran cointegration tests on candidate pairs",
-            "Computed spread z-scores",
-            "Backtested the strategy"
+            "Ran Engle-Granger and ADF cointegration tests on four popular pairs",
+            "Estimated hedge ratios and mean-reversion half-lives",
+            "Showed why a rolling z-score alone is misleading"
           ]
         }
       ]
