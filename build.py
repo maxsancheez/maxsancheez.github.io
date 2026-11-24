@@ -323,9 +323,10 @@ def main():
     contact = (mails + '<div class="others">' + "".join(
                    f'<a href="{e(l["url"])}"><strong>{e(l["label"])}</strong><span>{e(l["url"].split("://")[1])}</span></a>'
                    for l in d["links"]) + "".join(
-                   f'<a href="{e(r["href"])}"><strong>{e(r["label"])}</strong><span>{e(r["note"])}</span></a>'
+                   f'<a href="{e(r["href"])}" target="_blank" rel="noopener"><strong>{e(r["label"])}</strong><span>{e(r["note"])}</span></a>'
                    for r in resumes) + "</div>")
-    resume_btn = f'<a class="btn" href="{e(resumes[0]["href"])}">Resume</a>' if resumes else ""
+    # Resumes open in a new tab, in the browser's PDF viewer, which has its own download button.
+    resume_btn = f'<a class="btn" href="{e(resumes[0]["href"])}" target="_blank" rel="noopener">Resume</a>' if resumes else ""
     panels.append(("contact", "Contact", panel("contact", "Get in touch", contact, "Email is the best way to reach me. Either address works.")))
 
     tabs = "".join(f'<button role="tab" id="t-{t}" data-tab="{t}" aria-controls="p-{t}" aria-selected="false">{e(l)}</button>'
